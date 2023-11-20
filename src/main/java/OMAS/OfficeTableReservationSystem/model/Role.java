@@ -1,5 +1,6 @@
 package OMAS.OfficeTableReservationSystem.model;
 
-public class User {
-    
+public enum Role {
+    USER,
+    ADMIN   
 }
