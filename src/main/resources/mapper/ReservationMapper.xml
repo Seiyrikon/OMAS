@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Mapper for tbl project   -->
+<mapper namespace="OMAS.OfficeTableReservationSystem.dao.ReservationDao">
+
+    <!-- Login -->
+    <!-- <select id="findByUsername" resultType="com.v315.security.model.User">
+                SELECT user_id,
+                first_name,
+                last_name,
+                username,
+                password,
+                role
+                FROM tbl_user_mst
+                WHERE username = #{username}
+    </select> -->
+
+    <insert id="save" parameterType="OMAS.OfficeTableReservationSystem.model.Reservation">
+        INSERT INTO tbl_reservation_mst (
+            seat_id,
+            emp_id,
+            start_date,
+            end_date,
+            start_time,
+            end_time
+        )
+        VALUES (
+            #{seat_id},
+            #{emp_id},
+            #{start_date},
+            #{end_date},
+            #{start_time}, 
+            #{end_time}
+        );
+    </insert>
+</mapper>
